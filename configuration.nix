@@ -112,6 +112,7 @@
     pkgs.vscode
     pkgs.firefox
     pkgs.git
+    pkgs.gnome3.gnome-tweaks
     # pkgs.nodejs_21
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget

@@ -64,7 +64,7 @@
   services.printing.enable = true;
 
   # Enable sound with pipewire.
-  sound.enable = true;
+  # sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -112,7 +112,7 @@
     pkgs.vscode
     pkgs.firefox
     pkgs.git
-    pkgs.gnome3.gnome-tweaks
+    pkgs.gnome-tweaks
     pkgs.obsidian
     # pkgs.nodejs_21
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.

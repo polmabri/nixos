@@ -110,6 +110,7 @@
     docker
     google-chrome
     vscode
+    code-cursor
     firefox
     git
     gnome-tweaks

@@ -97,7 +97,24 @@
 
   # Docker
   virtualisation.docker.enable = true;
-  
+
+  # Windown VM
+  virtualisation.libvirtd = {
+    enable = true;
+
+    # Enable TPM emulation (for Windows 11)
+    qemu = {
+      swtpm.enable = true;
+    };
+  };
+
+  # Enable USB redirection
+  virtualisation.spiceUSBRedirection.enable = true;
+
+  # Allow VM management
+  users.groups.libvirtd.members = [ "marek" ];
+  users.groups.kvm.members = [ "marek" ];
+
   # virtualisation.docker.rootless = {
   #   enable = true;
   #   setSocketVariable = true;
@@ -116,6 +133,10 @@
     gnome-tweaks
     obsidian
     discord
+    gnome-boxes # VM management
+    dnsmasq # VM networking
+    phodav # (optional) Share files with guest VMs
+    virt-manager # VM management GUI
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

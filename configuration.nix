@@ -135,6 +135,7 @@
     discord
     virt-manager # VM management GUI
     remmina # Remote desktop client
+    opencode
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

@@ -133,10 +133,8 @@
     gnome-tweaks
     obsidian
     discord
-    gnome-boxes # VM management
-    dnsmasq # VM networking
-    phodav # (optional) Share files with guest VMs
     virt-manager # VM management GUI
+    remmina # Remote desktop client
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

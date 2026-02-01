@@ -51,21 +51,6 @@
   services.displayManager.gdm.enable = true;
   services.desktopManager.gnome.enable = true;
 
-  # Configure GNOME settings declaratively
-  programs.dconf.enable = true;
-  programs.dconf.profiles.user.databases = [{
-    settings = {
-      "org/gnome/settings-daemon/plugins/media-keys" = {
-        custom-keybindings = [ "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/handy/" ];
-      };
-      "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/handy" = {
-        name = "Handy Toggle Recording";
-        command = "handy-toggle";
-        binding = "<Control>F1";
-      };
-    };
-  }];
-
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "de";
@@ -151,6 +136,7 @@
     virt-manager # VM management GUI
     remmina # Remote desktop client
     opencode
+    lmstudio
     
     # Handy transcription toggle script
     (pkgs.writeShellScriptBin "handy-toggle" ''

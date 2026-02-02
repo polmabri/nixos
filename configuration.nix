@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, pkgsMaster, ... }:
 
 {
   imports =
@@ -135,8 +135,8 @@
     discord
     virt-manager # VM management GUI
     remmina # Remote desktop client
-    opencode
-    lmstudio
+    pkgsMaster.opencode
+    pkgsMaster.lmstudio
     
     # Handy transcription toggle script
     (pkgs.writeShellScriptBin "handy-toggle" ''

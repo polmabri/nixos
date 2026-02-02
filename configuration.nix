@@ -139,6 +139,7 @@
     pkgsMaster.lmstudio
     pulseaudio
     ffmpeg
+    nodejs
     
     # Handy transcription toggle script
     (pkgs.writeShellScriptBin "handy-toggle" ''

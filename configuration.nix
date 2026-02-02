@@ -137,6 +137,8 @@
     remmina # Remote desktop client
     pkgsMaster.opencode
     pkgsMaster.lmstudio
+    pulseaudio
+    ffmpeg
     
     # Handy transcription toggle script
     (pkgs.writeShellScriptBin "handy-toggle" ''

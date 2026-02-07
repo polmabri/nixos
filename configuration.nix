@@ -126,8 +126,7 @@
   environment.systemPackages = with pkgs; [
     docker
     google-chrome
-    vscode
-    code-cursor
+    pkgsMaster.vscode
     firefox
     git
     gnome-tweaks

@@ -145,10 +145,10 @@
     # Handy - Offline speech-to-text transcription
     (pkgs.appimageTools.wrapType2 {
       pname = "handy";
-      version = "0.7.0";
+      version = "0.7.2";
       src = pkgs.fetchurl {
-        url = "https://github.com/cjpais/Handy/releases/download/v0.7.0/Handy_0.7.0_amd64.AppImage";
-        sha256 = "193n0z10nl4apgnvlp4m224m2jdj1jsdj6vhdi66ng62h8ak0fxm";
+        url = "https://github.com/cjpais/Handy/releases/download/v0.7.2/Handy_0.7.2_amd64.AppImage";
+        sha256 = "sha256-eBdChhVRE+w4KBOJRSIeS2k7JnOfmSs+HOMDAAk0tiQ=";
       };
     })
   ];

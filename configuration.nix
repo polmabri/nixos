@@ -142,11 +142,6 @@
     ffmpeg
     nodejs
     
-    # Handy transcription toggle script
-    (pkgs.writeShellScriptBin "handy-toggle" ''
-      ${pkgs.procps}/bin/pkill -USR2 -x handy || true
-    '')
-    
     # Handy - Offline speech-to-text transcription
     (pkgs.appimageTools.wrapType2 {
       pname = "handy";
@@ -155,19 +150,6 @@
         url = "https://github.com/cjpais/Handy/releases/download/v0.7.0/Handy_0.7.0_amd64.AppImage";
         sha256 = "193n0z10nl4apgnvlp4m224m2jdj1jsdj6vhdi66ng62h8ak0fxm";
       };
-      extraInstallCommands = ''
-        mkdir -p $out/share/applications
-        cat > $out/share/applications/handy.desktop << EOF
-        [Desktop Entry]
-        Name=Handy
-        Comment=Offline speech-to-text transcription
-        Exec=handy
-        Icon=audio-input-microphone
-        Terminal=false
-        Type=Application
-        Categories=AudioVideo;Audio;Utility;
-        EOF
-      '';
     })
   ];
 

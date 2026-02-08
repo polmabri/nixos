@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, pkgsMaster, ... }:
+{ config, lib, pkgs, pkgsMaster, ... }:
 
 {
   imports =
@@ -47,9 +47,11 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
-  # Enable the GNOME Desktop Environment.
-  services.displayManager.gdm.enable = true;
+  # Enable KDE Plasma and GNOME (choose session at login).
+  services.displayManager.sddm.enable = true;
   services.desktopManager.gnome.enable = true;
+  services.desktopManager.plasma6.enable = true;
+  programs.ssh.askPassword = lib.mkForce "${pkgs.kdePackages.ksshaskpass}/bin/ksshaskpass";
 
   # Configure keymap in X11
   services.xserver.xkb = {

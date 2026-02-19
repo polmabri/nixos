@@ -92,7 +92,7 @@
   users.users.marek = {
     isNormalUser = true;
     description = "Marek";
-    extraGroups = [ "networkmanager" "wheel" "docker" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" "libvirtd" ];
     packages = with pkgs; [
     ];
   };
@@ -107,6 +107,7 @@
     # Enable TPM emulation (for Windows 11)
     qemu = {
       swtpm.enable = true;
+      vhostUserPackages = with pkgs; [ virtiofsd ];
     };
   };
 

@@ -68,6 +68,9 @@
   services.desktopManager.plasma6.enable = true;
   programs.ssh.askPassword = lib.mkForce "${pkgs.kdePackages.ksshaskpass}/bin/ksshaskpass";
 
+  # Power and session defaults
+  services.power-profiles-daemon.enable = true;
+
   # Printing
   services.printing.enable = true;
 

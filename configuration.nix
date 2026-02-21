@@ -48,7 +48,6 @@
 
   # Network
   networking.networkmanager.enable = true;
-  networking.nftables.enable = true;
   networking.hostName = hostname;
 
   # Bluetooth
@@ -113,7 +112,6 @@
     pkgsMaster.opencode
     nodejs
     obsidian
-    remmina # Remote desktop client
     pkgsMaster.lmstudio
     pkgsHandy.handy
   ];

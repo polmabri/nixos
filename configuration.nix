@@ -107,6 +107,7 @@
     };
   };
   virtualisation.spiceUSBRedirection.enable = true;    
+  programs.virt-manager.enable = true;
 
   # Packages
   environment.systemPackages = with pkgs; [
@@ -118,7 +119,6 @@
     pkgsMaster.opencode
     nodejs
     obsidian
-    virt-manager # VM management GUI
     remmina # Remote desktop client
     pkgsMaster.lmstudio
     pkgsHandy.handy

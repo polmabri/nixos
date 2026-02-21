@@ -37,6 +37,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelPackages = pkgs.linuxPackages_zen;
+  boot.tmp.useTmpfs = true;
   zramSwap.enable = true;
 
   # Network
@@ -45,7 +46,6 @@
 
   # Bluetooth
   hardware.bluetooth.enable = true;
-  hardware.bluetooth.powerOnBoot = true;
 
   # Time and locale
   time.timeZone = "Europe/Berlin";
@@ -76,7 +76,6 @@
   services.printing.enable = false;
 
   # Audio
-  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;

@@ -72,8 +72,8 @@
   # Power and session defaults
   services.power-profiles-daemon.enable = true;
 
-  # Printing
-  services.printing.enable = true;
+  # Printing (enable when needed)
+  services.printing.enable = false;
 
   # Audio
   services.pulseaudio.enable = false;

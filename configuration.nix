@@ -24,6 +24,7 @@
   };
   services.fstrim.enable = true;
   services.smartd.enable = true;
+  services.journald.extraConfig = "SystemMaxUse=500M";
 
   # User
   users.users.marek = {
@@ -42,10 +43,12 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelPackages = pkgs.linuxPackages_zen;
   boot.tmp.useTmpfs = true;
+  boot.kernel.sysctl."vm.swappiness" = 180;
   zramSwap.enable = true;
 
   # Network
   networking.networkmanager.enable = true;
+  networking.nftables.enable = true;
   networking.hostName = hostname;
 
   # Bluetooth

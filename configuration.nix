@@ -85,13 +85,11 @@
     pulse.enable = true;
   };
 
-  # Docker
-  virtualisation.docker = {
+  # Podman
+  virtualisation.podman = {
     enable = true;
-    rootless = {
-      enable = true;
-      setSocketVariable = true;
-    };
+    dockerCompat = true; # provides `docker` CLI alias
+    defaultNetwork.settings.dns_enabled = true;
   };
 
   # Security

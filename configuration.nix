@@ -106,6 +106,7 @@
   environment.systemPackages = with pkgs; [
     git
     ffmpeg
+    # kdePackages.filelight # Disk usage analyzer
     google-chrome
     firefox
     pkgsMaster.vscode

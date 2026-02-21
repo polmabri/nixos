@@ -29,7 +29,6 @@
     description = "Marek";
     extraGroups = [ "wheel" ]
       ++ lib.optional config.networking.networkmanager.enable "networkmanager"
-      ++ lib.optional config.virtualisation.docker.enable "docker"
       ++ lib.optional config.virtualisation.libvirtd.enable "libvirtd";
   };
   environment.localBinInPath = true;
@@ -37,6 +36,8 @@
   # Bootloader
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.kernelPackages = pkgs.linuxPackages_zen;
+  zramSwap.enable = true;
 
   # Network
   networking.networkmanager.enable = true;
@@ -89,11 +90,12 @@
     enable = true;
     rootless = {
       enable = true;
-      # Keep rootless available, but don't force all apps (like VS Code)
-      # to use the rootless socket by default.
-      setSocketVariable = false;
+      setSocketVariable = true;
     };
   };
+
+  # Security
+  security.apparmor.enable = true;
 
   # Virtual machines
   virtualisation.libvirtd = {

@@ -23,6 +23,7 @@
     options = "--delete-older-than 30d";
   };
   services.fstrim.enable = true;
+  services.smartd.enable = true;
 
   # User
   users.users.marek = {

@@ -60,6 +60,7 @@
   # Login and KDE Plasma
   services.displayManager.plasma-login-manager.enable = true;
   services.desktopManager.plasma6.enable = true;
+  services.dbus.implementation = "broker";
   programs.ssh.askPassword = lib.mkForce "${pkgs.kdePackages.ksshaskpass}/bin/ksshaskpass";
 
   # Power and session defaults

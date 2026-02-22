@@ -115,5 +115,6 @@
     obsidian
     pkgsMaster.lmstudio
     pkgsHandy.handy
+    czkawka # Duplicate file finder
   ];
 }

@@ -84,6 +84,7 @@
   virtualisation.podman = {
     enable = true;
     dockerCompat = true; # provides `docker` CLI alias
+    dockerSocket.enable = true;
     defaultNetwork.settings.dns_enabled = true;
   };
 
@@ -116,5 +117,6 @@
     pkgsMaster.lmstudio
     pkgsHandy.handy
     czkawka # Duplicate file finder
+    gh
   ];
 }

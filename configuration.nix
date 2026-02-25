@@ -106,6 +106,7 @@
   # Packages
   environment.systemPackages = with pkgs; [
     git
+    fuse-overlayfs
     ffmpeg
     # kdePackages.filelight # Disk usage analyzer
     google-chrome
